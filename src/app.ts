@@ -9,11 +9,11 @@ import userRoutes from './modules/user/user.routes';
 const app = express();
 
 // Middleware
-app.use(cors());
-app.use(helmet());
-app.use(morgan('dev'));
-app.use(compression());
-app.use(express.json());
+app.use(cors());                // Enables Cross-Origin Resource Sharing
+app.use(helmet());              // Adds security headers to protect against vulnerabilities
+app.use(morgan('dev'));         // Logs HTTP requests for better monitoring
+app.use(compression());         // Compresses response bodies for faster delivery
+app.use(express.json());        // Parse incoming JSON requests
 
 // Rate Limiter
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));
