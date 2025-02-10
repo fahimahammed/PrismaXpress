@@ -1,5 +1,7 @@
 # PrismaXpress - Backend Starter Template
 
+![Version](https://img.shields.io/github/package-json/v/fahimahammed/PrismaXpress)
+
 PrismaXpress is a backend starter template built using **TypeScript**, **Express.js**, **Prisma ORM**, and **PostgreSQL**. It follows a **modular pattern** and includes essential middleware and utility functions, providing a solid foundation for backend development.
 
 ## Features
