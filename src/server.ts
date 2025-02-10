@@ -2,12 +2,14 @@ import http, { Server } from 'http';
 import app from './app';
 import { prisma } from './config/database';
 import env from './config/env';
+import { logger } from './config/logger';
 
 let server: Server | null = null;
 
 async function connectToDatabase() {
     try {
         await prisma.$connect();
+        logger.info('Database connected');
         console.log('✅ Database connected successfully');
     } catch (error) {
         console.error('❌ Database connection failed:', error);
