@@ -19,4 +19,9 @@ app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));
 
 // Routes
 
+// Default route for testing
+app.get('/', (req, res) => {
+    res.send('API is running');
+});
+
 export default app;
